@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <section className="w-full h-full grid grid-row-4  lg:grid-cols-4 lg:grid-rows-4 gap-6">
+    <section className="w-full h-full grid grid-cols-4 grid-rows-[auto, auto, 1fr] gap-6">
       {/* div1: ProfilePerson */}
-      <div className="w-full grid-row-2 lg:col-start-1 lg:col-end-5 lg:row-start-1 lg:row-end-3">
+      <div className="w-full col-span-4 row-start-1 row-end-3 lg:col-start-1 lg:col-end-5 lg:row-start-1 lg:row-end-3">
         <ProfilePerson />
       </div>
 
       {/* div2: FoundedCo */}
-      <div className="w-full grid-row-2 lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5">
+      <div className="w-full col-span-4 row-start-3 row-end-4 lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5">
         <FoundedCo />
       </div>
 
@@ -70,7 +70,7 @@ function ProfilePerson() {
 
 function FoundedCo() {
   return (
-    <div className="bg-black p-6 flex flex-col gap-6 rounded-lg shadow-md border border-gray-700">
+    <div className="h-full bg-black p-6 flex flex-col gap-6 rounded-lg shadow-md border border-gray-700">
       <h5 className="text-xl font-bold text-white">Founded Companies</h5>
       <h3 className="text-6xl font-bold text-white">02</h3>
       <div className="flex justify-between items-start">

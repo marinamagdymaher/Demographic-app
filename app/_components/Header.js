@@ -72,7 +72,8 @@ function BottomHeader() {
           headerLinks.map((item, i) => (
             <li
               key={i}
-              className="h-full border-r border-gray-500 text-gray-500  gap-6 flex items-center pr-6"
+              className=
+              {`${i===0 && "text-white"} h-full border-r border-gray-500 text-gray-500  gap-6 flex items-center pr-6`}
             >
               {item}
             </li>

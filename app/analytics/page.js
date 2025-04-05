@@ -8,24 +8,27 @@ const cardBaseClasses = "bg-black rounded-lg shadow-md border border-gray-700";
 
 export default function Page() {
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full lg:h-auto">
       <h5 className="text-2xl font-bold text-white mb-4">Overview</h5>
 
-      <div className="grid grid-cols-4 grid-rows-2 gap-6 lg:grid-cols-4 lg:grid-rows-2 w-full h-full">
+      <div className="grid grid-cols-4 grid-rows-4 gap-6 lg:grid-cols-4 lg:grid-rows-2 w-full h-full">
+        {/* Chart */}
         <div
-          className={`col-start-1 col-end-5 row-start-1 row-end-2 lg:col-span-3 lg:row-span-2 w-full${cardBaseClasses}`}
+          className={`col-start-1 col-end-5 row-start-1 row-end-3 lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-3 w-full ${cardBaseClasses}`}
         >
           <Chart />
         </div>
 
+        {/* Insights */}
         <div
-          className={`col-start-1 col-end-5 row-start-2 row-end-3 lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-3 ${cardBaseClasses}`}
+          className={`col-start-1 col-end-5 row-start-3 row-end-4 lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-3 w-full ${cardBaseClasses}`}
         >
           <Insights />
         </div>
 
+        {/* Demographics */}
         <div
-          className={`col-start-1 col-end-5 row-start-3 row-end-4 lg:col-start-1 lg:col-end-5 lg:row-start-3 lg:row-end-4 ${cardBaseClasses}`}
+          className={`col-start-1 col-end-5 row-start-4 row-end-5 lg:col-start-1 lg:col-end-5 lg:row-start-3 lg:row-end-4 w-full ${cardBaseClasses}`}
         >
           <Demographics />
         </div>
@@ -42,7 +45,7 @@ function Insights() {
 
   return (
     <div
-      className={`${cardBaseClasses} p-4 w-full h-full flex flex-col justify-between`}
+      className={`${cardBaseClasses} p-4 w-full lg:h-full flex flex-col justify-between`}
     >
       <div>
         <div className="flex justify-between">

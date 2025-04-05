@@ -30,10 +30,10 @@ export default function RootLayout({ children }) {
           <Sidebar />
           
 
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col">
             <Header />
 
-            <main className="bg-[#080808] p-12 overflow-y-auto  flex items-start justify-between text-white">
+            <main className="bg-[#080808]  p-12 overflow-y-auto  flex items-start justify-between text-white flex-1">
               {children}
             </main>
             <Footer/>
