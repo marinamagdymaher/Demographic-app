@@ -4,6 +4,7 @@ import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
 import Sidebar from "@/app/_components/Sidebar";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       >
         <div className="flex h-full">
           <Sidebar />
+          
 
           <div className="flex-1">
             <Header />
@@ -34,6 +36,7 @@ export default function RootLayout({ children }) {
             <main className="bg-[#080808] p-12 overflow-y-auto  flex items-start justify-between text-white">
               {children}
             </main>
+            <Footer/>
           </div>
         </div>
       </body>

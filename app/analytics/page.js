@@ -8,25 +8,22 @@ const cardBaseClasses = "bg-black rounded-lg shadow-md border border-gray-700";
 
 export default function Page() {
   return (
-    <section className="w-full">
+    <section className="w-full h-full">
       <h5 className="text-2xl font-bold text-white mb-4">Overview</h5>
 
       <div className="grid grid-cols-4 grid-rows-2 gap-6 lg:grid-cols-4 lg:grid-rows-2 w-full h-full">
-        {/* div1 — grid-area: 1 / 1 / 2 / 5 */}
         <div
           className={`col-start-1 col-end-5 row-start-1 row-end-2 lg:col-span-3 lg:row-span-2 w-full${cardBaseClasses}`}
         >
           <Chart />
         </div>
 
-        {/* div2 — grid-area: 2 / 1 / 3 / 5 */}
         <div
           className={`col-start-1 col-end-5 row-start-2 row-end-3 lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-3 ${cardBaseClasses}`}
         >
           <Insights />
         </div>
 
-        {/* div3 — grid-area: 3 / 1 / 5 / 5 */}
         <div
           className={`col-start-1 col-end-5 row-start-3 row-end-4 lg:col-start-1 lg:col-end-5 lg:row-start-3 lg:row-end-4 ${cardBaseClasses}`}
         >

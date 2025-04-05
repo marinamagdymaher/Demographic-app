@@ -7,7 +7,7 @@ export default function Messages() {
   const pathName = usePathname();
   if (pathName === "/profile")
     return (
-      <div className=" flex flex-col items-center justify-between  border-r border-gray-500">
+      <div className="flex flex-col items-center justify-between  border-r border-gray-500">
         <div className="flex-1 flex flex-col">
           {Array.from({ length: 3 }, (_, i) => (
             <div
@@ -33,7 +33,7 @@ export default function Messages() {
     );
   if (pathName === "/analytics")
     return (
-      <div className=" flex flex-col items-center justify-between  border-r border-gray-500">
+      <div className="flex flex-col items-center justify-between  border-r border-gray-500">
         <div className="flex-1 flex flex-col">
           <div className={`flex justify-center items-center px-3 py-3 `}>
             <span className="w-8 h-8 flex relative">

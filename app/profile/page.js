@@ -3,14 +3,19 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <section className="w-full h-full grid grid-cols-4 grid-rows-3 gap-6">
-      <div className="col-span-4  row-span-1">
+    <section className="w-full h-full grid grid-row-4  lg:grid-cols-4 lg:grid-rows-4 gap-6">
+      {/* div1: ProfilePerson */}
+      <div className="w-full grid-row-2 lg:col-start-1 lg:col-end-5 lg:row-start-1 lg:row-end-3">
         <ProfilePerson />
       </div>
-      <div className="col-span-4 lg:col-span-2 row-span-2">
+
+      {/* div2: FoundedCo */}
+      <div className="w-full grid-row-2 lg:col-start-1 lg:col-end-3 lg:row-start-3 lg:row-end-5">
         <FoundedCo />
       </div>
-      <div className="col-span-2 hidden lg:block row-span-2">
+
+      {/* div3: Experience */}
+      <div className="w-full hidden lg:grid lg:col-start-3 lg:col-end-5 lg:row-start-3 lg:row-end-5">
         <Experience />
       </div>
     </section>
@@ -109,7 +114,7 @@ function FoundedCo() {
 
 function Experience() {
   return (
-    <div className="bg-black p-6 rounded-lg shadow-md border border-gray-700">
+    <div className="bg-black  p-6 rounded-lg shadow-md border border-gray-700">
       <h5 className="text-2xl font-bold text-white">Experience</h5>
       {Array.from({ length: 3 }, (_, i) => (
         <div key={i} className="flex justify-between items-start gap-3 py-5">
