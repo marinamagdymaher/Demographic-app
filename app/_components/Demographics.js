@@ -6,36 +6,44 @@ const demographicsData = [
     country: "India",
     flag: "/india.png",
     percentage: 40,
-    color: "bg-purple-500",
+    color: "bg-[#4834D4]",
   },
-  { country: "USA", flag: "/usa.png", percentage: 25, color: "bg-orange-500" },
+  { country: "USA", flag: "/usa.png", percentage: 25, color: "bg-[#BD5302]" },
   {
     country: "Canada",
     flag: "/canada.png",
     percentage: 10,
-    color: "bg-red-500",
+    color: "bg-[#E9C16B]",
   },
-  { country: "UAE", flag: "/uae.png", percentage: 7, color: "bg-green-500" },
+  { country: "UAE", flag: "/uae.png", percentage: 7, color: "bg-[#01754F]" },
 ];
 
 export default function Demographics() {
   return (
-    <section className="p-6 h-full">
+    <section className="p-6">
       <h5 className="text-white text-2xl font-bold mb-4">Demographics</h5>
-      <div className=" flex items-center justify-between gap-6 space-y-3">
+      <div className=" flex justify-between items-end flex-col lg:flex-row gap-6 space-y-3 w-full h-full">
         {/* Left: Map Section */}
-
-        {/* Map Image */}
-        <Image
-          src="/demo.PNG"
-          alt="Demographics Map"
-          width={700}
-          height={400}
-          className=""
-        />
+        <div className="w-full flex flex-col justify-between gap-5">
+          <Image
+            src="/earth.jpg"
+            alt="Demographics Map"
+            width={700}
+            height={400}
+            className="object-cover rounded-xl"
+          />
+          <div className="flex items-center justify-center h-10 w-96 gap-3 border border-gray-700 rounded-full ">
+            {demographicsData.map((item, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <span className={`w-6 h-6 rounded-full ${item.color}`}></span>
+                <span className="text-lg font-medium">{item.country}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Right: Stats Section */}
-        <div className="w-1/3 flex flex-col justify-between gap-5">
+        <div className="w-full flex flex-col justify-between gap-5">
           {demographicsData.map((data, index) => (
             <div
               key={index}

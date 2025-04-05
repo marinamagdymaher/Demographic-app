@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <section className="w-full grid grid-cols-4 grid-rows-4 gap-6">
-      <div className="col-span-4 row-span-2 ">
+    <section className="w-full h-full grid grid-cols-4 grid-rows-3 gap-6">
+      <div className="col-span-4  row-span-1">
         <ProfilePerson />
       </div>
-      <div className="col-span-2 row-span-2 ">
+      <div className="col-span-4 lg:col-span-2 row-span-2">
         <FoundedCo />
       </div>
-      <div className="col-span-2 row-span-2 ">
+      <div className="col-span-2 hidden lg:block row-span-2">
         <Experience />
       </div>
     </section>
@@ -27,7 +27,7 @@ function ProfilePerson() {
   return (
     <div className="space-y-3">
       <h5 className="text-2xl font-bold text-white">Overview</h5>
-      <div className="bg-black p-6 flex items-center gap-8 rounded-lg shadow-md border border-gray-700">
+      <div className="bg-black p-6 flex flex-col lg:flex-row lg:items-center gap-8 rounded-lg shadow-md border border-gray-700">
         <IoPerson className="w-32 h-32 text-3xl" />
         <div className="flex flex-col justify-between gap-2">
           <h6 className="text-lg font-semibold">Mr A</h6>
@@ -40,20 +40,22 @@ function ProfilePerson() {
               height={15}
             />
           </p>
-          <span className="bg-white text-black w-20 p-1 text-xs rounded-md font-medium">
-            Entrepreneur
-          </span>
-          <div className="flex gap-3 py-5">
-            {socialIcons.map((img, i) => (
-              <Image
-                key={i}
-                src={img}
-                alt="social-icon"
-                width={30}
-                height={30}
-                className="opacity-80 hover:opacity-100 transition"
-              />
-            ))}
+          <div className="flex lg:flex-col justify-between items-end lg:items-start gap-3">
+            <span className="bg-white text-black w-20 p-1 text-xs rounded-md font-medium">
+              Entrepreneur
+            </span>
+            <div className="flex  items-end gap-3">
+              {socialIcons.map((img, i) => (
+                <Image
+                  key={i}
+                  src={img}
+                  alt="social-icon"
+                  width={30}
+                  height={30}
+                  className="opacity-80 hover:opacity-100 transition"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

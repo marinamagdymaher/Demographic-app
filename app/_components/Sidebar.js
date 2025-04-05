@@ -7,7 +7,7 @@ import Messages from "./Messages";
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 flex flex-col bg-black text-gray-500 z-10 border-r border-gray-500">
+    <aside className="w-64 hidden lg:flex flex-col bg-black text-gray-500 z-10 border-r border-gray-500">
       <div>
         <Logo />
       </div>
