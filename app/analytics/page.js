@@ -11,24 +11,24 @@ export default function Page() {
     <section className="w-full h-full lg:h-auto">
       <h5 className="text-2xl font-bold text-white mb-4">Overview</h5>
 
-      <div className="lg:grid grid-cols-4 grid-rows-4 gap-6 lg:grid-cols-4 lg:grid-rows-2 w-full h-full">
+      <div className="grid grid-cols-1 grid-rows-4 gap-6 lg:grid-cols-4 lg:grid-rows-2 w-full h-full">
         {/* Chart */}
         <div
-          className={`mb-5 lg:mb-0 col-start-1 col-end-5 row-start-1 row-end-3 lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-3 w-full ${cardBaseClasses}`}
+          className={`row-start-1 row-end-2 col-start-1 col-end-5  lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-3 w-full ${cardBaseClasses}`}
         >
           <Chart />
         </div>
 
         {/* Insights */}
         <div
-          className={`mb-5 lg:mb-0 col-start-1 col-end-5 row-start-3 row-end-4 lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-3 w-full ${cardBaseClasses}`}
+          className={`row-start-2 row-end-3 col-start-1 col-end-5  lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-3 w-full ${cardBaseClasses}`}
         >
           <Insights />
         </div>
 
         {/* Demographics */}
         <div
-          className={`mb-5 lg:mb-0 col-start-1 col-end-5 row-start-4 row-end-5 lg:col-start-1 lg:col-end-5 lg:row-start-3 lg:row-end-4 w-full ${cardBaseClasses}`}
+          className={`row-start-3 row-end-4 col-start-1 col-end-5 lg:col-start-1 lg:col-end-5 lg:row-start-3 lg:row-end-4 w-full ${cardBaseClasses}`}
         >
           <Demographics />
         </div>

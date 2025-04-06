@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <section className="w-full h-full grid grid-cols-4 grid-rows-[auto, auto, 1fr] gap-6">
+    <section className="w-full  grid grid-cols-4 grid-rows-[auto, auto, 1fr] gap-6">
       {/* div1: ProfilePerson */}
       <div className="w-full col-span-4 row-start-1 row-end-3 lg:col-start-1 lg:col-end-5 lg:row-start-1 lg:row-end-3">
         <ProfilePerson />

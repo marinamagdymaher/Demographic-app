@@ -18,7 +18,7 @@ export default function Footer() {
   const isAnalyticsPage = pathname === "/analytics";
   const footerClasses = `
     w-full bg-black w-full lg:hidden 
-    ${isAnalyticsPage ? "fixed right-0 left-0 bottom-[25rem]" : "relative"}
+    ${isAnalyticsPage ? "fixed right-0 left-0 bottom-0" : "relative"}
   `;
 
   return (

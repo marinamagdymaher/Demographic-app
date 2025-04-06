@@ -32,11 +32,11 @@ export default function Demographics() {
             height={400}
             className="object-cover rounded-xl"
           />
-          <div className="flex items-center justify-center h-10 w-96 gap-3 border border-gray-700 rounded-full ">
+          <div className="flex items-center justify-center h-10 lg:w-96 gap-3 border border-gray-700 rounded-full ">
             {demographicsData.map((item, i) => (
               <div key={i} className="flex items-center gap-3">
-                <span className={`w-6 h-6 rounded-full ${item.color}`}></span>
-                <span className="text-lg font-medium">{item.country}</span>
+                <span className={`w-3 h-3 md:w-6 md:h-6 rounded-full ${item.color}`}></span>
+                <span className="lg:text-lg font-medium">{item.country}</span>
               </div>
             ))}
           </div>
